@@ -1,16 +1,9 @@
 import React from 'react';
 import './Dashboard.css'
-import { Layout, Space } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+import { Divider, Layout, Menu, Space } from 'antd';
+import { Col, Row } from 'antd';
 
-let headerStyle: string = {
-  textAlign: 'center',
-  color: '#fff',
-  height: 64,
-  paddingInline: 50,
-  lineHeight: '64px',
-  backgroundColor: '#7dbcea',
-};
+const { Header, Footer, Sider, Content } = Layout;
 
 function Dashboard() {
   return (
@@ -20,13 +13,19 @@ function Dashboard() {
         style={{
           width: '100%'
         }}
-        size={[0, 48]}
-      >
+        size={[0, 48]}>
         <Layout>
-          <Header style={headerStyle}>helloworld</Header>
+          <Row justify={'space-between'}>
+            <Col span={12}>
+              helloworld
+            </Col>
+            <Col span={12} flex={''}>
+              helloworld
+            </Col>
+          </Row>
           <Layout>
             <Content>
-              <div className='navbar'>hellowrold</div>
+              <div>hellowrold</div>
             </Content>
             <Sider>helloworld</Sider>
           </Layout>

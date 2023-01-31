@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import { StyleProvider } from '@ant-design/cssinjs';
+import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/cssinjs';
 
 // ===== Pages ===== 
 // Home 
@@ -22,7 +22,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <StyleProvider hashPriority="high">
+    <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
       <RouterProvider router={router} />
     </StyleProvider>
   </React.StrictMode>

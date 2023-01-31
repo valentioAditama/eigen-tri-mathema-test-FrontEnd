@@ -1,5 +1,35 @@
-/* .navbar {
-    background-color: red;
-    color: black;
-    height: 200px;
-} */
+* {
+    margin: 0;
+    border: 1px solid red;
+}
+
+.logo {
+    margin-right: 40px;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+    text-decoration: none;
+}
+
+li a {
+    color: rgb(172, 166, 166);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+a:hover{
+    color: white;
+}
