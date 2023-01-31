@@ -1,10 +1,12 @@
 import React from 'react';
 import './Dashboard.css'
-import { Card, Divider, Layout, Menu, Space } from 'antd';
+import { Card, Layout, Space } from 'antd';
 import { Col, Row } from 'antd';
+import { Typography } from 'antd';
 import Meta from 'antd/es/card/Meta';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Title } = Typography;
+const { Header, Footer, Content } = Layout;
 
 function Dashboard() {
   return (
@@ -50,8 +52,9 @@ function Dashboard() {
                 <small style={{ fontSize: '25px' }}>- Place to find the latest news - </small>
               </div>
             </div>
-            <div>
-              <Row justify="space-between" style={{margin: 30}}>
+            <div style={{ margin: 30 }}>
+              <Title level={3}>Latest Newst</Title>
+              <Row justify="space-between">
                 <Col span={4}>
                   <Card
                     hoverable
@@ -110,8 +113,6 @@ function Dashboard() {
               </Row>
             </div>
           </Content>
-
-          <Footer>helloworld</Footer>
         </Layout>
       </Space>
     </main>
