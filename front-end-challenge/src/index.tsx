@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Route, RouterProvider, RouterProps, RouteProps } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/cssinjs';
 
@@ -9,11 +9,12 @@ import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/c
 import Dashboard from './pages/Dashboard/Dashboard';
 
 // Review
-import Review from './pages/Review/review';
+import Review from './pages/Review/Review';
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Dashboard /> },
-  { path: '/review', element: <Review /> }
+  { path: '/review/:id', element: <Review /> }
 ]);
 
 const root = ReactDOM.createRoot(

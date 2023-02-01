@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Button } from 'antd';
 import NewsCard from './NewsCard';
 
 interface Article {
@@ -15,7 +15,7 @@ const NewsList = () => {
     useEffect(() => {
         const fetchData = async () => {
             const result = await fetch(
-                `https://newsapi.org/v2/top-headlines?country=us&apiKey=4e5a2895ab4e4d72a888becae8ce37a8`
+                `https://newsapi.org/v2/everything?q=apple&from=2023-01-31&to=2023-01-31&sortBy=popularity&apiKey=4e5a2895ab4e4d72a888becae8ce37a8`
             );
             const data = await result.json();
             setNews(data.articles);
@@ -38,6 +38,7 @@ const NewsList = () => {
                         description={item.description}
                         url={item.url}
                         urlToImage={item.urlToImage}
+                        link={item.title}
                     />
                 </Col>
             ))}
