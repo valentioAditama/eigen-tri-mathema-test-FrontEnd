@@ -14,7 +14,7 @@ import Review from './pages/Review/Review';
 
 const router = createBrowserRouter([
   { path: "/", element: <Dashboard /> },
-  { path: '/review/:id', element: <Review /> }
+  { path: '/review', element: <Review /> }
 ]);
 
 const root = ReactDOM.createRoot(
