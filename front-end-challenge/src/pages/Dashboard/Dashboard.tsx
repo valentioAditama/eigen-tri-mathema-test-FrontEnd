@@ -1,14 +1,36 @@
-import React from 'react';
-import './Dashboard.css'
+import React, { useEffect, useState } from 'react';
 import { Card, Layout, Space } from 'antd';
 import { Col, Row } from 'antd';
 import { Typography } from 'antd';
 import Meta from 'antd/es/card/Meta';
+import axios from 'axios';
+import './Dashboard.css'
+import NewsList from '../../components/NewsList';
 
 const { Title } = Typography;
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 
-function Dashboard() {
+const Dashboard: React.FC = () => {
+  const [news, setNews] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      const response = await axios.get(
+        'https://newsapi.org/v2/top-headlines',
+        {
+          params: {
+            apiKey: '4e5a2895ab4e4d72a888becae8ce37a8',
+            country: 'us'
+          }
+        }
+      );
+      // console.log(response.data.articles);
+    };
+
+    fetchNews();
+  }, []);
+
+
   return (
     <main>
       <Space
@@ -52,65 +74,9 @@ function Dashboard() {
                 <small style={{ fontSize: '25px' }}>- Place to find the latest news - </small>
               </div>
             </div>
-            <div style={{ margin: 30 }}>
-              <Title level={3}>Latest Newst</Title>
-              <Row justify="space-between">
-                <Col span={4}>
-                  <Card
-                    hoverable
-                    style={{
-                      width: 240,
-                    }}
-                    cover={<img alt="example" src="https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2022/01/Tesla-Gigafactory-Berlin-Hero-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1" />}
-                  >
-                    <Meta title="Europe Street beat" description="www.instagram.com" />
-                  </Card>
-                </Col>
-                <Col span={4}>
-                  <Card
-                    hoverable
-                    style={{
-                      width: 240,
-                    }}
-                    cover={<img alt="example" src="https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2022/01/Tesla-Gigafactory-Berlin-Hero-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1" />}
-                  >
-                    <Meta title="Europe Street beat" description="www.instagram.com" />
-                  </Card>
-                </Col>
-                <Col span={4}>
-                  <Card
-                    hoverable
-                    style={{
-                      width: 240,
-                    }}
-                    cover={<img alt="example" src="https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2022/01/Tesla-Gigafactory-Berlin-Hero-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1" />}
-                  >
-                    <Meta title="Europe Street beat" description="www.instagram.com" />
-                  </Card>
-                </Col>
-                <Col span={4}>
-                  <Card
-                    hoverable
-                    style={{
-                      width: 240,
-                    }}
-                    cover={<img alt="example" src="https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2022/01/Tesla-Gigafactory-Berlin-Hero-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1" />}
-                  >
-                    <Meta title="Europe Street beat" description="www.instagram.com" />
-                  </Card>
-                </Col>
-                <Col span={4}>
-                  <Card
-                    hoverable
-                    style={{
-                      width: 240,
-                    }}
-                    cover={<img alt="example" src="https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2022/01/Tesla-Gigafactory-Berlin-Hero-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1" />}
-                  >
-                    <Meta title="Europe Street beat" description="www.instagram.com" />
-                  </Card>
-                </Col>
-              </Row>
+
+            <div style={{ margin: '20px' }}>
+              <NewsList />
             </div>
           </Content>
         </Layout>
