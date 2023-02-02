@@ -51,9 +51,8 @@ const Review = () => {
                   <li className='logo'>
                     Open News
                   </li>
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">Category</a></li>
-                  <li><a href="#about">About</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/review">Detail</a></li>
                 </ul>
               </Col>
               <Col span={12}>
