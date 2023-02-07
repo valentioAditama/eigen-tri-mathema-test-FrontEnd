@@ -58,3 +58,95 @@ a:hover{
 Footer{
     background-color: black;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .banner {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        filter: brightness(50%);
+    }
+
+    .centerTextBanner {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .centerTextBanner > small {
+        font-size: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+      .centerTextBanner {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .centerTextBanner > small {
+        font-size: 30px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .centerTextBanner {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .centerTextBanner > small {
+        font-size: 40px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .centerTextBanner {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .centerTextBanner > small {
+        font-size: 40px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .centerTextBanner {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .centerTextBanner > small {
+        font-size: 40px;
+    }
+}

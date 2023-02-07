@@ -24,7 +24,7 @@ const Dashboard: React.FC = () => {
             zIndex: '1'
           }}>
             <Row>
-              <Col span={12}>
+              <Col span={12} md={12}>
                 <ul>
                   <li className='logo'>
                     Open News
@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
                   <li><a href="/review">Detail</a></li>
                 </ul>
               </Col>
-              <Col span={12}>
+              <Col span={12} md={12}>
                 <div style={{ display: 'flex', justifyContent: 'end' }}>
                   <ul>
                     <li><a href="#about">Sign Up</a></li>
@@ -49,7 +49,7 @@ const Dashboard: React.FC = () => {
               <img src="https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2022/01/Tesla-Gigafactory-Berlin-Hero-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1" className='banner' alt="" />
               <div className='centerTextBanner'>
                 <h3>Welcome To Open News</h3>
-                <small style={{ fontSize: '25px' }}>- Place to find the latest news - </small>
+                <small>- Place to find the latest news - </small>
               </div>
             </div>
 
