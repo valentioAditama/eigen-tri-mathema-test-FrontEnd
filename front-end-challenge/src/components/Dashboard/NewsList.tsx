@@ -28,7 +28,7 @@ const NewsList = () => {
     return (
         <Row>
             {news.map((item: Article) => (
-                <Col key={item.title} xs={24} md={12} lg={8} xl={6}
+                <Col key={item.title} xs={24} md={12} lg={8} xl={6} xxl={4}
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
